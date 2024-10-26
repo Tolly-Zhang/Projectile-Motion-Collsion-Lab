@@ -30,11 +30,17 @@
 This experiment explored the collision dynamics of two projectiles launched simultaneously from distinct starting points to apply principles of projectile motion in predicting precise collision coordinates. Positioned two meters apart, the launch apparatuses propelled projectiles in parallel, necessitating accurate calculation of initial velocities and launch angles. Measured velocities obtained from speed traps and calculated launch angles were used to establish initial conditions for predicting and observing the collision of both projectiles. A comparison of theoretical predictions with observed results demonstrated the reliability of projectile motion equations and highlighted their relevance to practical applications, reinforcing our understanding of kinematic principles in physics.
 
 \section{Introduction}
-A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g=9.81 \ m/s$. The following pair of parametric equations can model the motion of a projectile based on its initial setup:
-\[x(t) = v_0 \cos(\theta) \cdot t\]
-\[y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2\]
 
-Where:
+\subsection{Theory}
+
+A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g=9.81 \ m/s$. The following pair of parametric equations can model the motion of a projectile based on its initial setup:
+\[
+x(t) = v_0 \cos(\theta) \cdot t
+\]
+\[
+y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+\]
+where:
 \begin{enumerate}
     \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
     \item $y(t)$ is the \textbf{vertical displacement} from the launch point at time $t$.
@@ -51,50 +57,50 @@ The following variables were defined:
     \item Define a coordinate plane that is co-planar to the paths of both projectiles. The unit vectors, $\hat{i}$ and $\hat{j}$, are equal to 1mm, respectively.
     \item Let $t$ be time, where $t=0$ at the instant both projectiles are launched.
     \item Let $x^A(t)$, $y^A(t)$, $x^B(t)$, and $y^B(t)$ be the positions of $x$ and $y$ for launchers $A$ and $B$, respectively, as a function of $t$.
+    
     \begin{itemize}
-        \item The displacement vectors of both launchers can be represented using $\Vec{s^A}(t)$ and $\Vec{s^B}(t)$, where:
+        \item The displacement vectors of both launchers can be represented using $\vec{s^A}(t)$ and $\vec{s^B}(t)$, where:
         \[
-        \Vec{s^A}(t)= \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0)\end{bmatrix}
+        \vec{s^A}(t)= \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0)\end{bmatrix}
         \]
         \[
-        \Vec{s^B}(t)= \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
+        \vec{s^B}(t)= \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
         \]
     \end{itemize}
+
     \item Let $v_x^A(t)$, $v_y^A(t)$, $v_x^B(t)$, and $v_y^B(t)$ be the horizontal and vertical velocities of launchers $A$ and $B$, respectively, as a function of $t$. 
+    
     \begin{itemize}
+        
         \item Here, the functions are equal to the first-order derivatives of their position counterparts. For example: 
         \[
         v_x^A(t) = \frac{d x^A(t)}{dt}
         \]
         The same applies to the other 3 functions.
-        \item Likewise, the combined velocities of both launchers can be represented using $\Vec{v^A}(t)$ and $\Vec{v^B}(t)$, where:
+        \item Likewise, the combined velocities of both launchers can be represented using $\vec{v^A}(t)$ and $\vec{v^B}(t)$, where:
         \[
-        \Vec{v^A}(t)= \begin{bmatrix} v_x^A(t) \\ v_y^A(t) \end{bmatrix}
+        \vec{v^A}(t)= \begin{bmatrix} v_x^A(t) \\ v_y^A(t) \end{bmatrix}
         \]
         \[
-        \Vec{v^B}(t)= \begin{bmatrix} v_x^B(t) \\ v_y^B(t) \end{bmatrix}
+        \vec{v^B}(t)= \begin{bmatrix} v_x^B(t) \\ v_y^B(t) \end{bmatrix}
         \]
         
     \end{itemize}
+
+    \item Let the displacement vector from the position of launcher $A$ to launcher $B$ be denoted as \(D\). Assuming the starting position of launcher $A$ is at the origin, the starting positions of both launchers can be writtn as:
+    \[
+    \vec{s^A}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    \]
+    \[
+    \vec{s^B}(0) = \vec{s^A}(0) + \vec{D}
+    \]
     
 \end{itemize}
 
-
+\subsection{Collision Conditions}
+Let the collision time be denoted as \(t_c\) such that \(\vec{s^A}(t_c) = \vec{s^B}(t_c)\).
 
 \subsection{Predicted Calculations}
-
-\paragraph{Collision Conditions:}
-\begin{enumerate}
-    \item \textbf{Horizontal Positions Equal:}
-    \[
-    x_A(t_c) = x_B(t_c)
-    \]
-    
-    \item \textbf{Vertical Positions Equal:}
-    \[
-    y_A(t_c) = y_B(t_c)
-    \]
-\end{enumerate}
 
 \paragraph{Calculations:}
 \begin{enumerate}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.25)  26 OCT 2024 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.25)  26 OCT 2024 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -543,8 +543,8 @@ Package hyperref Info: Link coloring OFF on input line 13.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.53     \item L
-                et $x^A(t)$, $y^A(t)$, $x^B(t)$, and $y^B(t)$ be the positio... [1]
+l.58     \item L
+                et $t$ be time, where $t=0$ at the instant both projectiles ... [1]
 
 [2]
 
@@ -555,12 +555,12 @@ l.53     \item L
 [5]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 313.
+(caption)                particular \caption on input line 319.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 329.
+(caption)                particular \caption on input line 335.
 See the caption package documentation for explanation.
 
 
@@ -577,20 +577,20 @@ LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-09-10>
  ***********
 Package rerunfilecheck Info: File `Final.out' has not changed.
-(rerunfilecheck)             Checksum: 6E6348EF1AB7AEB693226F96F0C3AA6E;2541.
+(rerunfilecheck)             Checksum: E398E5FC65F418EBD3551A4520E40A8D;2790.
  ) 
 Here is how much of TeX's memory you used:
- 21530 strings out of 473898
- 407945 string characters out of 5723610
- 782232 words of memory out of 5000000
- 44035 multiletter control sequences out of 15000+600000
+ 21531 strings out of 473898
+ 407981 string characters out of 5723610
+ 782233 words of memory out of 5000000
+ 44037 multiletter control sequences out of 15000+600000
  565305 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,1038b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Tolly Zhang\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Final.pdf (10 pages, 152344 bytes).
+Output written on Final.pdf (10 pages, 153209 bytes).
 PDF statistics:
- 213 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 53 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
