@@ -1,0 +1,375 @@
+\documentclass[12pt]{article}
+
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{hyperref}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vfill
+    \vspace*{2.5in}
+    {\Huge\bfseries Experimental Validation and Adjustment of a Theoretical Model for Mid-Air Collision of Projectiles \par}
+    \vspace{0.2in}
+    {\LARGE Aaradhay Anand, Tolly Zhang\par}
+    \vspace{0.2in}
+    {\LARGE October 24, 2024 \par}
+    \vfill
+\end{titlepage}
+
+\newpage
+
+\section{Abstract}
+This experiment explored the collision dynamics of two projectiles launched simultaneously from distinct starting points to apply principles of projectile motion in predicting precise collision coordinates. Positioned two meters apart, the launch apparatuses propelled projectiles in parallel, necessitating accurate calculation of initial velocities and launch angles. Measured velocities obtained from speed traps and calculated launch angles were used to establish initial conditions for predicting and observing the collision of both projectiles. A comparison of theoretical predictions with observed results demonstrated the reliability of projectile motion equations and highlighted their relevance to practical applications, reinforcing our understanding of kinematic principles in physics.
+
+\section{Introduction}
+A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g=9.81 \ m/s$. The following pair of parametric equations can model the motion of a projectile based on its initial setup:
+\[x(t) = v_0 \cos(\theta) \cdot t\]
+\[y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2\]
+
+Where:
+\begin{enumerate}
+    \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
+    \item $y(t)$ is the \textbf{vertical displacement} from the launch point at time $t$.
+    \item $v_0$ is the \textbf{initial velocity},
+    \item $\theta$ is the \textbf{launch angle}, and
+    \item $g$ is the \textbf{acceleration due to gravity}.
+\end{enumerate}
+
+\subsection{Setup}
+
+Our setup consisted of two projectile launchers positioned at the same vertical height and angled so their projectile paths would be co-planar. Let them be launchers $A$ and $B$.
+The following variables were defined:
+\begin{itemize}
+    \item Define a coordinate plane that is co-planar to the paths of both projectiles. The unit vectors, $\hat{i}$ and $\hat{j}$, are equal to 1mm, respectively.
+    \item Let $t$ be time, where $t=0$ at the instant both projectiles are launched.
+    \item Let $x^A(t)$, $y^A(t)$, $x^B(t)$, and $y^B(t)$ be the positions of $x$ and $y$ for launchers $A$ and $B$, respectively, as a function of $t$.
+    \begin{itemize}
+        \item The displacement vectors of both launchers can be represented using $\Vec{s^A}(t)$ and $\Vec{s^B}(t)$, where:
+        \[
+        \Vec{s^A}(t)= \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0)\end{bmatrix}
+        \]
+        \[
+        \Vec{s^B}(t)= \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
+        \]
+    \end{itemize}
+    \item Let $v_x^A(t)$, $v_y^A(t)$, $v_x^B(t)$, and $v_y^B(t)$ be the horizontal and vertical velocities of launchers $A$ and $B$, respectively, as a function of $t$. 
+    \begin{itemize}
+        \item Here, the functions are equal to the first-order derivatives of their position counterparts. For example: 
+        \[
+        v_x^A(t) = \frac{d x^A(t)}{dt}
+        \]
+        The same applies to the other 3 functions.
+        \item Likewise, the combined velocities of both launchers can be represented using $\Vec{v^A}(t)$ and $\Vec{v^B}(t)$, where:
+        \[
+        \Vec{v^A}(t)= \begin{bmatrix} v_x^A(t) \\ v_y^A(t) \end{bmatrix}
+        \]
+        \[
+        \Vec{v^B}(t)= \begin{bmatrix} v_x^B(t) \\ v_y^B(t) \end{bmatrix}
+        \]
+        
+    \end{itemize}
+    
+\end{itemize}
+
+
+
+\subsection{Predicted Calculations}
+
+\paragraph{Collision Conditions:}
+\begin{enumerate}
+    \item \textbf{Horizontal Positions Equal:}
+    \[
+    x_A(t_c) = x_B(t_c)
+    \]
+    
+    \item \textbf{Vertical Positions Equal:}
+    \[
+    y_A(t_c) = y_B(t_c)
+    \]
+\end{enumerate}
+
+\paragraph{Calculations:}
+\begin{enumerate}
+    \item \textbf{Equating Vertical Positions:} 
+    
+    Set \( y_A(t_c) = y_B(t_c) \):
+    \[
+    v_A \sin(\theta_A) t_c - \frac{1}{2} g t_c^2 = v_B \sin(\theta_B) t_c - \frac{1}{2} g t_c^2
+    \]
+    
+    Simplify:
+    \[
+    v_A \sin(\theta_A) t_c = v_B \sin(\theta_B) t_c
+    \]
+    
+    Since \( t_c \) is common on both sides of the equation, it would cancel out.
+    
+    \textbf{Equation (1):}
+    \[
+    v_A \sin(\theta_A) = v_B \sin(\theta_B)
+    \]
+    
+    \item \textbf{Equate Horizontal Positions:} 
+    
+    Set \( x_A(t_c) = x_B(t_c) \):
+    \[
+    v_A \cos(\theta_A) t_c = D + v_B \cos(\theta_B) t_c
+    \]
+    
+    Taking all terms that have \( t_c \) to one side:
+
+    \[
+    (v_A \cos(\theta_A) - v_B \cos(\theta_B)) t_c = D
+    \]
+    
+    \textbf{Equation (2):}
+    \[
+    t_c = \frac{D}{v_A \cos(\theta_A) - v_B \cos(\theta_B)}
+    \]
+\end{enumerate}
+
+\vspace{0.5cm} % Adjusts space above the line
+\begin{center}
+    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
+\end{center}
+\vspace{0.5cm} % Adjusts space below the line
+
+\paragraph{\large \textbf{Solve for \( \theta_A \) and \( \theta_B \):}}
+
+We have two equations with three unknowns (\( \theta_A \), \( \theta_B \), \( t_c \)). 
+To solve this, we would choose a value for one of the angles and solve for the others.
+
+For this, we would take the angle of our launcher B, i.e. \( \theta_B = 74^\circ \).
+
+Calculate \( \sin(\theta_B) \) and \( \cos(\theta_B) \):
+\begin{itemize}
+    \item \( \sin(74^\circ) = 0.9613 \)
+    \item \( \cos(74^\circ) = 0.2756 \)
+\end{itemize}
+
+Using Equation (1) that we found above to solve for \( \theta_A \):
+\[
+v_A \sin(\theta_A) = v_B \sin(\theta_B)
+\]
+
+\[
+6.45 \sin(\theta_A) = 4.735 \times 0.9613
+\]
+
+\[
+6.45 \sin(\theta_A) = 4.552 \, \text{m/s}
+\]
+
+Solving for \( \sin(\theta_A) \):
+\[
+\sin(\theta_A) = \frac{4.552}{6.45} \Rightarrow 0.7066
+\]
+
+Calculate \( \theta_A \):
+\[
+\theta_A = \arcsin(0.7066) = 44.9^\circ
+\]
+
+Therefore, our predicted value for our large launcher is 44.9 degrees, making \( \theta_A = 44.9^\circ \).
+\vspace{0.5cm} % Adjusts space above the line
+\begin{center}
+    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
+\end{center}
+\vspace{0.5cm} % Adjusts space below the line
+
+\paragraph{\large \textbf{Calculating Collision Time (\( t_c \))}}
+
+Calculate \( \cos(\theta_A) \):
+\[
+\cos(44.9) = \sqrt{1 - \sin^2(44.9)} = \sqrt{1 - (0.7066)^2} = 0.7076
+\]
+
+Calculate \( v_A \cos(\theta_A) \) and \( v_B \cos(\theta_B) \):
+\[
+v_A \cos(\theta_A) = 6.45 \times 0.7076 = 4.563 \, \text{m/s}
+\]
+\[
+v_B \cos(\theta_B) = 4.735 \times 0.2756 = 1.304 \, \text{m/s}
+\]
+
+From here, we use Equation (2) to calculate the time (\( t_c \)):
+\[
+t_c = \frac{D}{v_A \cos(\theta_A) - v_B \cos(\theta_B)}
+\]
+\[
+t_c = \frac{D}{4.563 - 1.304} \Rightarrow \frac{2.0}{3.259} = 0.6136 \, \text{s}
+\]
+
+\vspace{0.5cm} % Adjusts space above the line
+\begin{center}
+    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
+\end{center}
+\vspace{0.5cm} % Adjusts space below the line
+
+\paragraph{\large \textbf{Calculate Collision Point}}
+
+\textbf{Horizontal position at \( t_c \)}
+\begin{itemize}
+    \item \textbf{Projectile A:}
+    \[
+    x_A(t_c) = v_A \cos(\theta_A) t_c = 4.563 \times 0.6136 = 2.798 \, \text{m}
+    \]
+    
+    \item \textbf{Projectile B:}
+    \[
+    x_B(t) = D + v_B \cos(\theta_B) t
+    \]
+    \[
+    x_B(t) = 2.0 + 1.304 \times 0.6136 = 2.0 + 0.8 = 2.798 \, \text{m}
+    \]
+\end{itemize}
+
+These calculations show that our horizontal values are equal, which means that our projectile would be at the same position on the x-axis.
+
+\textbf{Vertical position at \( t_c \)}
+\begin{itemize}
+    \item \textbf{Projectile A:}
+    \[
+    y_A(t_c) = v_A \sin(\theta_A) t - \frac{1}{2} g t^2
+    \]
+    \[
+    y_A(t_c) = 4.552 \times 0.6136 - 4.905 \times (0.6136)^2
+    \]
+    \[
+    y_A(t_c) = 2.793 - 1.847 = 0.946 \, \text{m}
+    \]
+
+    \item \textbf{Projectile B:}
+    \[
+    y_B(t_c) = v_B \sin(\theta_B) t - \frac{1}{2} g t^2
+    \]
+    \[
+    y_B(t_c) = 4.552 \times 0.6136 - 4.905 \times (0.6136)^2
+    \]
+    \[
+    y_B(t_c) = 2.793 - 1.847 = 0.946 \, \text{m}
+    \]
+\end{itemize}
+
+Since vertical and horizontal velocities are equal, we can predict that the projectiles would collide at these coordinates, given these values.
+
+\noindent\rule{\textwidth}{0.5pt} % This creates a full-width horizontal line
+
+
+
+\section{Materials and Methods}
+
+\subsection{Materials}
+\begin{itemize}
+    \item \textbf{Launcher A (Big Launcher):}
+    \begin{itemize}
+        \item Plastic ball (25.3 mm in diameter, 9.73 g mass)
+        \item Positioned at $x = 0 \ \text{m}$
+        \item Velocity is measured using a speed trap
+    \end{itemize}
+    \item \textbf{Launcher B (Small Launcher):}
+    \begin{itemize}
+        \item Metal ball (15.7 mm diameter, 16.36 g mass)
+        \item Positioned at $x = D = 2 \ \text{m}$
+        \item Velocity is measured using a speed trap
+    \end{itemize}
+    \item Sparkview Speed Trap
+    \item Measuring Tape to measure the distance between launchers
+\end{itemize}
+
+\subsection{Methods}
+\begin{enumerate}
+    \item Position Launcher A (big launcher) at $x = 0 \ \text{m}$ and Launcher B (small launcher) at $x = 2 \ \text{m}$, both set to the same vertical height.
+    \item Record the exit velocities of both projectiles by conducting several trials.
+    \item Calculate the average velocity for both projectiles.
+    \item Use kinematic equations to predict the required launch angles for both projectiles to collide in mid-air, considering that Launcher A is two meters behind Launcher B.
+    \item Launch both projectiles simultaneously and record the actual launch angles and collision points.
+    \item Compare the calculated values with the actual results and analyze any differences.
+\end{enumerate}
+
+\section{Results}
+
+\subsection{Launcher A (Big Launcher)}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+    & \textbf{Slowest mode} & \textbf{Medium mode} & \textbf{High Speed} \\
+\hline
+\textbf{Trial 1} & 3.22 m/s & 4.74 m/s & 6.64 m/s \\
+\textbf{Trial 2} & 3.17 m/s & 4.84 m/s & 6.27 m/s \\
+\textbf{Trial 3} & 3.18 m/s & 4.80 m/s & 6.44 m/s \\
+\hline
+\textbf{Average} & 3.19 m/s & 4.79 m/s & 6.45 m/s \\
+\hline
+\end{tabular}
+\captionof{table}{Velocity data for Launcher A (Big Launcher)}
+\end{center}
+
+\subsection{Launcher B (Small Launcher)}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+    & \textbf{Slowest mode} & \textbf{Medium mode} & \textbf{High Speed} \\
+\hline
+\textbf{Trial 1} & 2.49 m/s & 3.55 m/s & 4.69 m/s \\
+\textbf{Trial 2} & 2.55 m/s & 3.55 m/s & 4.73 m/s \\
+\textbf{Trial 3} & 2.55 m/s & 3.55 m/s & 4.75 m/s \\
+\hline
+\textbf{Average} & 2.53 m/s & 3.55 m/s & 4.72 m/s \\
+\hline
+\end{tabular}
+\captionof{table}{Velocity data for Launcher B (Small Launcher)}
+\end{center}
+
+\subsection{Additional Information}
+\begin{itemize}
+    \item Distance between launchers: $D = 2.0 \ \text{m}$
+    \item Gravity: $g = 9.81 \ \text{m/s}^2$
+\end{itemize}
+
+
+
+\section{Discussion}
+
+\subsection{Summary of Experimental Results}
+In this experiment, we aimed to determine the required launch angles and timing for two projectiles, launched in the same direction from different starting points, to collide mid-air. After conducting the experiment and analyzing the slow-motion footage, we obtained the following values:
+\begin{itemize}
+    \item \textbf{Launcher A (Large Projectile)}: Experimental launch angle of \( 40^\circ \).
+    \item \textbf{Launcher B (Small Projectile)}: Experimental launch angle of \( 74^\circ \).
+    \item \textbf{Collision Time}: \( 0.62 \) seconds, calculated by multiplying the time measured in slow motion by the frames per second (FPS) of the recording.
+\end{itemize}
+
+These values closely align with the pre-lab calculations, which predicted angles close to \( 44.9^\circ \) for Launcher A and exactly \( 74^\circ \) for Launcher B, as well as a collision time of approximately \( 0.6136 \) seconds.
+
+\subsection{Comparison with Pre-Lab Calculations}
+The experimentally obtained angle for Launcher A is \( 40^\circ \), while the pre-lab calculation predicted an angle of \( 44.9^\circ \). This corresponds to a difference of approximately \( 4.9^\circ \), or a \( 12.25\% \) discrepancy from the predicted angle. For Launcher B, the experimental and calculated angles match exactly at \( 74^\circ \). The collision time calculated from the experiment (\( 0.62 \) seconds) is also remarkably close to the predicted time of \( 0.6136 \) seconds, differing by less than \( 1\% \).
+
+These results suggest that the pre-lab calculations provided the predicted values necessary for a collision. The slight discrepancy in Launcher A’s angle could be due to minor errors in angle measurement, subtle inconsistencies in initial velocity, or the effects of air resistance, which were neglected in the theoretical model.
+
+\subsection{Evaluation of Measurement Techniques}
+The collision time was determined using a slow-motion recording. To obtain the time, I multiplied the recorded slow-motion time by the video's FPS. This technique allowed for accurate time measurement, minimizing human error in timing but introducing potential error due to slight frame rate variations or imprecisions in playback speed.
+
+\subsection{Potential Sources of Error}
+\begin{enumerate}
+    \item \textbf{Angle Measurement}: Small errors in measuring the launch angles could contribute to the observed discrepancies. Even a minor deviation in the launcher setup could slightly alter the launch angle.
+    \item \textbf{Initial Velocity Variations}: The experimental setup may not perfectly reproduce the exact initial velocities used in calculations. Variations in launcher tension or minor friction effects could impact the speed. The reason for this is spring overuse; as we keep loading and releasing a spring, its base length tends to grow shorter because of how often it is compressed, which can lead to the spring being more compressed and releasing less force on the ball.
+
+    \item \textbf{Air Resistance}: Although the theoretical calculations assumed no air resistance, real-world conditions introduce a slight drag on each projectile, which could affect both angle and collision timing.
+    \item \textbf{Data Collection}: While collecting our initial velocities, we had the launchers shoot the projectile horizontally and vertically to find the velocity of the ball now because we couldn't predict at what angle our ball would be launching just to get our velocity values, we shot the ball horizontally along the table. Although this method did work, there are chances that the ball might have rubbed against the barrel of the turret, which could've slowed down its initial release trajectory. 
+    \item Laser Discrepencies: 
+\end{enumerate}
+
+\section{Conclusion}
+The experiment successfully validated the pre-lab calculations, demonstrating that the theoretical model for projectile motion can accurately predict collision conditions within an acceptable margin of error. The small discrepancies observed emphasize the impact of real-world factors like measurement precision and air resistance, which should be accounted for in further studies. This experiment underscores the reliability of kinematic equations for predicting projectile motion, even in complex scenarios with multiple variables.
+
+
+
+\end{document}
