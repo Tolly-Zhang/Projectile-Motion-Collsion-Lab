@@ -33,13 +33,41 @@ This experiment explored the collision dynamics of two projectiles launched simu
 
 \subsection{Theory}
 
-A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g=9.81 \ m/s$. The following pair of parametric equations can model the motion of a projectile based on its initial setup:
+A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g = 9.81 \ m/s$. 
+
+Assume a projectijle is launched from a point $(x_0, y_0)$ with an initial velocity vector $\vec{v_0}$ at an angle $\theta$ at standard position. The horizontal and vertical components of the projectile's initial velocity are given by:
+
 \[
-x(t) = v_0 \cos(\theta) \cdot t
+v_{0x} = v_0 \cos(\theta)
 \]
 \[
-y(t) = v_0 \sin(\theta) \cdot t - \frac{1}{2} g t^2
+v_{0y} = v_0 \sin(\theta)
 \]
+Below is a diagram:
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate (v) at (3,4);
+
+        \coordinate (O) at (0,0);
+        \coordinate (X) at (3,0);
+    
+        \draw[->, >=stealth, dashed] (O) -- (X) node[pos=0.5, below] {$v_{0x}$};
+        \draw[->, >=stealth, dashed] (X) -- (v) node[pos=0.5, right] {$v_{0y}$};
+        
+        \draw[->, >=stealth] (O) -- (v) node[pos=0.5, above, xshift=-6.5pt] {$v_0$};
+        
+        \pgfmathsetmacro{\radius}{2};
+        \pgfmathsetmacro{\angle}{2};
+
+        \draw (1.5,0) arc[start angle=0, end angle=45, radius=1.5cm];
+    \end{tikzpicture}
+      
+\end{center}
+
+
+
+
 where:
 \begin{enumerate}
     \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
