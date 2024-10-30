@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.25)  28 OCT 2024 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.25)  29 OCT 2024 20:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -539,15 +539,14 @@ Package hyperref Info: Link coloring OFF on input line 13.
 
 {C:/Users/Tolly Zhang/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
 
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.75     \item $
-                v_0$ is the \textbf{initial velocity}, [1]
+l.80     \item $
+                y(t)$ is the \textbf{vertical displacement} from the launch ... [1]
 
 [2]
 
@@ -560,12 +559,12 @@ l.75     \item $
 [6]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 348.
+(caption)                particular \caption on input line 354.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 364.
+(caption)                particular \caption on input line 370.
 See the caption package documentation for explanation.
 
 
@@ -583,15 +582,15 @@ Package rerunfilecheck Info: File `Final.out' has not changed.
 (rerunfilecheck)             Checksum: E398E5FC65F418EBD3551A4520E40A8D;2790.
  ) 
 Here is how much of TeX's memory you used:
- 21663 strings out of 473898
- 411008 string characters out of 5723610
+ 21705 strings out of 473898
+ 411930 string characters out of 5723610
  781234 words of memory out of 5000000
- 44169 multiletter control sequences out of 15000+600000
+ 44211 multiletter control sequences out of 15000+600000
  565305 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,7n,93p,1038b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Tolly Zhang\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Final.pdf (10 pages, 154148 bytes).
+Output written on Final.pdf (10 pages, 154203 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  53 named destinations out of 1000 (max. 500000)
