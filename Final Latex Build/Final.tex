@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 
 \usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{float}
+\usepackage{array}  
 \usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{amsmath}
@@ -31,42 +33,42 @@ This experiment explored the collision dynamics of two projectiles launched simu
 
 \section{Introduction}
 
-\subsection{Theory}
+% \subsection{Theory}
 
-A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g = 9.81 \ m/s$. 
+% A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g = 9.81 \ m/s$. 
 
-Assume a projectile is launched from a point $(x_0, y_0)$ with an initial velocity vector $\vec{v_0}$ at an angle $\theta$ at standard position. The horizontal and vertical components of the projectile's initial velocity are given by:
+% Assume a projectile is launched from a point $(x_0, y_0)$ with an initial velocity vector $\vec{v_0}$ at an angle $\theta$ at standard position. The horizontal and vertical components of the projectile's initial velocity are given by:
 
-\[
-v_{0x} = v_0 \cos(\theta)
-\]
-\[
-v_{0y} = v_0 \sin(\theta)
-\]
+% \[
+% v_{0x} = v_0 \cos(\theta)
+% \]
+% \[
+% v_{0y} = v_0 \sin(\theta)
+% \]
 
 
 
-Below is a diagram:
+% Below is a diagram:
 
-\begin{center}
-    \begin{tikzpicture}
-        \coordinate (v) at (3,4);
+% \begin{center}
+%     \begin{tikzpicture}
+%         \coordinate (v) at (3,4);
 
-        \coordinate (O) at (0,0);
-        \coordinate (X) at (3,0);
+%         \coordinate (O) at (0,0);
+%         \coordinate (X) at (3,0);
     
-        \draw[->, >=stealth, dashed] (O) -- (X) node[pos=0.5, below] {$v_{0x}$};
-        \draw[->, >=stealth, dashed] (X) -- (v) node[pos=0.5, right] {$v_{0y}$};
+%         \draw[->, >=stealth, dashed] (O) -- (X) node[pos=0.5, below] {$v_{0x}$};
+%         \draw[->, >=stealth, dashed] (X) -- (v) node[pos=0.5, right] {$v_{0y}$};
         
-        \draw[->, >=stealth] (O) -- (v) node[pos=0.5, above, xshift=-6.5pt] {$v_0$};
+%         \draw[->, >=stealth] (O) -- (v) node[pos=0.5, above, xshift=-6.5pt] {$v_0$};
         
-        \pgfmathsetmacro{\radius}{2};
-        \pgfmathsetmacro{\angle}{atan(4/3)}
-        \pgfmathsetmacro{\angleDegrees}{round(\angle)}
+%         \pgfmathsetmacro{\radius}{2};
+%         \pgfmathsetmacro{\angle}{atan(4/3)}
+%         \pgfmathsetmacro{\angleDegrees}{round(\angle)}
         
-        \draw (1,0) arc[start angle=0, end angle=\angleDegrees, radius=1cm] node[pos=0.5, above right, yshift=-4pt] {$\theta$};
-    \end{tikzpicture}
-\end{center}
+%         \draw (1,0) arc[start angle=0, end angle=\angleDegrees, radius=1cm] node[pos=0.5, above right, yshift=-4pt] {$\theta$};
+%     \end{tikzpicture}
+% \end{center}
 
 
 
@@ -74,34 +76,30 @@ Below is a diagram:
 
 
 
-where:
-\begin{enumerate}
-    \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
-    \item $y(t)$ is the \textbf{vertical displacement} from the launch point at time $t$.
-    \item $v_0$ is the \textbf{initial velocity},
-    \item $\theta$ is the \textbf{launch angle}, and
-    \item $g$ is the \textbf{acceleration due to gravity}.
-\end{enumerate}
+% where:
+% \begin{enumerate}
+%     \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
+%     \item $y(t)$ is the \textbf{vertical displacement} from the launch point at time $t$.
+%     \item $v_0$ is the \textbf{initial velocity},
+%     \item $\theta$ is the \textbf{launch angle}, and
+%     \item $g$ is the \textbf{acceleration due to gravity}.
+% \end{enumerate}
 
-\subsection{Setup}
+\subsection{Theory}
 
 The setup consisted of two projectile launchers positioned at the same vertical height and angled so their projectile paths would be co-planar. Let them be launchers $A$ and $B$.
 The following variables were defined:
 \begin{itemize}
     \item Define a coordinate plane that is co-planar to the paths of both projectiles. The unit vectors, $\hat{i}$ and $\hat{j}$, are equal to 1mm, respectively.
-    \item Let $t$ be time, where $t=0$ at the instant both projectiles are launched.
+    \item Let $t$ be time, expressed in seconds. In this setup, $t=0$ at the instant both projectiles are launched.
     \item Let $x^A(t)$, $y^A(t)$, $x^B(t)$, and $y^B(t)$ be the $x$ and $y$ positions for launchers $A$ and $B$, respectively, as a function of $t$.
-    
-    \begin{itemize}
-        \item The displacement vectors of both launchers can be represented using $\vec{s^A}(t)$ and $\vec{s^B}(t)$, where:
-        \[
-        \vec{s^A}(t)= \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0)\end{bmatrix}
-        \]
-        \[
-        \vec{s^B}(t)= \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
-        \]
-    \end{itemize}
-
+    \item Let $\vec{s^A}(t)$ and $\vec{s^B}(t)$ be the displacement vectors for lanchers $A$ and $B$, respectively, as a function  of t, where:
+    \[
+    \vec{s^A}(t) = \begin{bmatrix} s^A_x(t) \\ s^A_y(t) \end{bmatrix} = \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0) \end{bmatrix} 
+    \]
+    \[
+    \vec{s^B}(t) = \begin{bmatrix} s^B_x(t) \\ s^B_y(t) \end{bmatrix} = \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
+    \]
     \item Let $v_x^A(t)$, $v_y^A(t)$, $v_x^B(t)$, and $v_y^B(t)$ be the horizontal and vertical velocities of launchers $A$ and $B$, respectively, as a function of $t$. 
     
     \begin{itemize}
@@ -128,11 +126,109 @@ The following variables were defined:
     \[
     \vec{s^B}(0) = \vec{s^A}(0) + \vec{D}
     \]
-    
+    \item Let $g$ be the acceleration due to gravity, where \( g = 9.81 \ \text{m/s}^2 \).
+    \item Let $t_c$ be the time of collision such that \( t_c \geq 0 \). For a collision to occur:
+        \[
+            \vec{s^B}(t_c) = \vec{s^A}(t_c)
+        \]
+
 \end{itemize}
 
-\subsection{Collision Conditions}
-Let a collision occur when the positions of both projectiles are equal at a given time, \(t_c\), such that \(t_c \geq 0\). The following must be true for a collision to occur:
+\subsection{Initial Speed Measurements}
+To ascertain the initial velocities of the projectiles, the projectile launchers were positioned horizontally on a table and loaded to varying levels. Upon firing the launchers, the speed of the projectiles was recorded using a speed trap in conjunction with an iPad application. The average velocities of the projectiles were subsequently calculated and utilized in further analyses. It is important to note that the measured velocities represent the \textbf{exit velocities} of the projectiles at the moment they left the launchers.
+
+Below are the measured velocities for both launchers:
+
+\renewcommand{\arraystretch}{1.1 }
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Speed Mode} & \textbf{Trial 1}(m/s) & \textbf{Trial 2}(m/s) & \textbf{Trial 3}(m/s) & \textbf{Average}(m/s)\\ 
+        \hline
+        \textbf{Slow} & 3.22 & 3.17 & 3.18 & \textbf{3.19} \\ 
+        \hline
+        \textbf{Medium} & 4.74 & 4.84 & 4.80 & \textbf{4.79} \\ 
+        \hline
+        \textbf{High} & 6.64 & 6.27 & 6.44 & \textbf{6.45} \\ 
+        \hline
+    \end{tabular}
+    \caption{Launcher B Exit Speeds by Speed Mode}
+    \label{table:ISA}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \textbf{Speed Mode} & \textbf{Trial 1}(m/s) & \textbf{Trial 2}(m/s) & \textbf{Trial 3}(m/s) & \textbf{Average}(m/s) \\ 
+        \hline
+        \textbf{Slow} & 2.49 & 2.55 & 2.55 & \textbf{2.53} \\ 
+        \hline
+        \textbf{Medium} & 3.55 & 3.55 & 3.55 & \textbf{3.55} \\ 
+        \hline
+        \textbf{High} & 4.69 & 4.73 & 4.75 & \textbf{4.72} \\ 
+        \hline
+        
+    \end{tabular}
+    \caption{Launcher A Exit Speeds by Speed Mode}
+    \label{table:ISB}
+\end{table}
+
+\subsection{Calculations}
+Let the launches angles of launchers $A$ and $B$ be denoted as $\theta_A$ and $\theta_B$, respectively, in standard position. The initial velocities of the projectiles can be written as:
+\[
+\vec{v^A}(0) = \begin{bmatrix} |\vec{v^A}(0)| \cdot \cos(\theta_A) \\ |\vec{v^A}(0)| \cdot \sin(\theta_A) \end{bmatrix}
+\]
+\[
+\vec{v^B}(0) = \begin{bmatrix} |\vec{v^B}(0)| \cdot \cos(\theta_B) \\ |\vec{v^B}(0)| \cdot \sin(\theta_B) \end{bmatrix}
+\]
+The above corresponds to the following sets of parametric equations:
+\[
+\begin{cases}
+    v_x^A(0) = |\vec{v^A}(0)| \cdot \cos(\theta_A) \\
+    v_y^A(0) = |\vec{v^A}(0)| \cdot \sin(\theta_A)
+\end{cases}
+\]
+\[
+\begin{cases}
+    v_x^B(0) = |\vec{v^B}(0)| \cdot \cos(\theta_B) \\
+    v_y^B(0) = |\vec{v^B}(0)| \cdot \sin(\theta_B)
+\end{cases}
+\]
+As the projectiles travel through the air, \(\vec{v_x}\) remains constant while \(\vec{v_y}\) changes due to the acceleration of gravity. Based on our prior setup where \(\vec{s^A}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\) and \(\vec{s^B}(0) = \vec{s^A}(0) + \vec{D}\), the displacement functions can be written as:
+\[
+\vec{s^A}(t) = \begin{bmatrix} v_x^A(0) \cdot t \\ v_y^A(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
+\]
+\[
+\vec{s^B}(t) = \begin{bmatrix} D_x + v_x^B(0) \cdot t \\ D_y + v_y^B(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection{Predicted Calculations}

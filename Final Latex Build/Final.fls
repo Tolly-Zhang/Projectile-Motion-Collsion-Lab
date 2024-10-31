@@ -19,6 +19,10 @@ INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphicx.sty
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex\latex\graphics\graphics.sty
@@ -247,8 +251,8 @@ INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cms
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
