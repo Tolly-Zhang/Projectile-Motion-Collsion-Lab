@@ -33,57 +33,22 @@ This experiment explored the collision dynamics of two projectiles launched simu
 
 \section{Introduction}
 
-% \subsection{Theory}
+\subsection{Overview}
 
-% A projectile is defined as a body under motion subject only to the force of gravity. On the earth's surface, a freely falling body will experience an acceleration of $g = 9.81 \ m/s$. 
+Projectile motion describes the path of an object that, once launched, is influenced solely by gravity. Thus, a projectile is subject only to the initial velocity and the gravitational force acting upon it, yielding a uniform vertical acceleration of \( g = 9.81 \ \text{m/s}^2 \) on the Earth's surface.
 
-% Assume a projectile is launched from a point $(x_0, y_0)$ with an initial velocity vector $\vec{v_0}$ at an angle $\theta$ at standard position. The horizontal and vertical components of the projectile's initial velocity are given by:
+In analyzing projectile motion, we decompose the motion into two perpendicular components: horizontal and vertical. Under ideal conditions, neglecting air resistance, the horizontal velocity component remains constant throughout the projectile's trajectory, as there are no horizontal forces acting on the object. Conversely, the vertical velocity component varies due to the continuous downward acceleration imparted by gravity. This decomposition allows us to express the position and velocity of the projectile at any given time by treating the horizontal and vertical motions independently.
 
-% \[
-% v_{0x} = v_0 \cos(\theta)
-% \]
-% \[
-% v_{0y} = v_0 \sin(\theta)
-% \]
+The general equations governing projectile motion, with air resistance neglected, are as follows:
+\[
+x(t) = x_0 + v_{0x} \cdot t
+\]
+\[
+y(t) = y_0 + v_{0y} \cdot t - \frac{1}{2} g t^2
+\]
+where \( x_0 \) and \( y_0 \) denote the initial horizontal and vertical positions, respectively, \( v_{0x} \) and \( v_{0y} \) are the initial horizontal and vertical components of the velocity, and \( t \) is the time elapsed since launch.
 
-
-
-% Below is a diagram:
-
-% \begin{center}
-%     \begin{tikzpicture}
-%         \coordinate (v) at (3,4);
-
-%         \coordinate (O) at (0,0);
-%         \coordinate (X) at (3,0);
-    
-%         \draw[->, >=stealth, dashed] (O) -- (X) node[pos=0.5, below] {$v_{0x}$};
-%         \draw[->, >=stealth, dashed] (X) -- (v) node[pos=0.5, right] {$v_{0y}$};
-        
-%         \draw[->, >=stealth] (O) -- (v) node[pos=0.5, above, xshift=-6.5pt] {$v_0$};
-        
-%         \pgfmathsetmacro{\radius}{2};
-%         \pgfmathsetmacro{\angle}{atan(4/3)}
-%         \pgfmathsetmacro{\angleDegrees}{round(\angle)}
-        
-%         \draw (1,0) arc[start angle=0, end angle=\angleDegrees, radius=1cm] node[pos=0.5, above right, yshift=-4pt] {$\theta$};
-%     \end{tikzpicture}
-% \end{center}
-
-
-
-
-
-
-
-% where:
-% \begin{enumerate}
-%     \item $x(t)$ is the \textbf{horizontal displacement} from the launch point at time $t$,
-%     \item $y(t)$ is the \textbf{vertical displacement} from the launch point at time $t$.
-%     \item $v_0$ is the \textbf{initial velocity},
-%     \item $\theta$ is the \textbf{launch angle}, and
-%     \item $g$ is the \textbf{acceleration due to gravity}.
-% \end{enumerate}
+In this experiment, air resistance is considered negligible. As a result, we can apply these idealized equations to predict the motion of projectiles launched from two distinct initial positions. This assumption simplifies the analysis, enabling precise calculations of projectile paths based solely on initial velocities, launch angles, and the gravitational constant \( g \).
 
 \subsection{Theory}
 
@@ -165,14 +130,19 @@ To measure initial projectile velocities, launchers were positioned horizontally
 \subsection{Calculations}
 Let the launch angles of launchers \( A \) and \( B \) be denoted as \( \theta_A \) and \( \theta_B \), respectively. The initial velocities of the projectiles can be written as:
 \[
-\vec{v^A}(0) = |\vec{v^A}(0)|\begin{bmatrix} \cos(\theta_A) \\ \sin(\theta_A) \end{bmatrix}, \quad \vec{v^B}(0) = |\vec{v^B}(0)|\begin{bmatrix} \cos(\theta_B) \\ \sin(\theta_B) \end{bmatrix}
+\vec{v^A}(0) = |\vec{v^A}(0)|\begin{bmatrix} \cos(\theta_A) \\ \sin(\theta_A) \end{bmatrix}
+\]
+\[
+\vec{v^B}(0) = |\vec{v^B}(0)|\begin{bmatrix} \cos(\theta_B) \\ \sin(\theta_B) \end{bmatrix}
 \]
 
 Since \(\vec{v_x}\) is constant, while \(\vec{v_y}\) varies due to gravity, the displacement functions based on initial positions are:
 \[
-\vec{s^A}(t) = \begin{bmatrix} v_x^A(0) \cdot t \\ v_y^A(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}, \quad \vec{s^B}(t) = \begin{bmatrix} D_x + v_x^B(0) \cdot t \\ D_y + v_y^B(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
+\vec{s^A}(t) = \begin{bmatrix} v_x^A(0) \cdot t \\ v_y^A(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
 \]
-
+\[
+\vec{s^B}(t) = \begin{bmatrix} D_x + v_x^B(0) \cdot t \\ D_y + v_y^B(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
+\]
 Setting \(\vec{s^A}(t_c) = \vec{s^B}(t_c)\) for collision at time \(t_c\) leads to:
 \[
 \begin{cases}
@@ -188,207 +158,6 @@ Dividing each by \( t_c \) (if \( t_c \neq 0 \)), we derive:
 This equation asserts that for collision, the difference between initial velocities must match the displacement scaled with $t_c$. 
 
 The \textbf{collision point} can be expressed as \(\vec{s^A}(t_c)\) or \(\vec{s^B}(t_c)\)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Predicted Calculations}
-
-\paragraph{Calculations:}
-\begin{enumerate}
-    \item \textbf{Equating Vertical Positions:} 
-    
-    Set \( y_A(t_c) = y_B(t_c) \):
-    \[
-    v_A \sin(\theta_A) t_c - \frac{1}{2} g t_c^2 = v_B \sin(\theta_B) t_c - \frac{1}{2} g t_c^2
-    \]
-    
-    Simplify:
-    \[
-    v_A \sin(\theta_A) t_c = v_B \sin(\theta_B) t_c
-    \]
-    
-    Since \( t_c \) is common on both sides of the equation, it would cancel out.
-    
-    \textbf{Equation (1):}
-    \[
-    v_A \sin(\theta_A) = v_B \sin(\theta_B)
-    \]
-    
-    \item \textbf{Equate Horizontal Positions:} 
-    
-    Set \( x_A(t_c) = x_B(t_c) \):
-    \[
-    v_A \cos(\theta_A) t_c = D + v_B \cos(\theta_B) t_c
-    \]
-    
-    Taking all terms that have \( t_c \) to one side:
-
-    \[
-    (v_A \cos(\theta_A) - v_B \cos(\theta_B)) t_c = D
-    \]
-    
-    \textbf{Equation (2):}
-    \[
-    t_c = \frac{D}{v_A \cos(\theta_A) - v_B \cos(\theta_B)}
-    \]
-\end{enumerate}
-
-\vspace{0.5cm} % Adjusts space above the line
-\begin{center}
-    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
-\end{center}
-\vspace{0.5cm} % Adjusts space below the line
-
-\paragraph{\large \textbf{Solve for \( \theta_A \) and \( \theta_B \):}}
-
-We have two equations with three unknowns (\( \theta_A \), \( \theta_B \), \( t_c \)). 
-To solve this, we would choose a value for one of the angles and solve for the others.
-
-For this, we would take the angle of our launcher B, i.e. \( \theta_B = 74^\circ \).
-
-Calculate \( \sin(\theta_B) \) and \( \cos(\theta_B) \):
-\begin{itemize}
-    \item \( \sin(74^\circ) = 0.9613 \)
-    \item \( \cos(74^\circ) = 0.2756 \)
-\end{itemize}
-
-Using Equation (1) that we found above to solve for \( \theta_A \):
-\[
-v_A \sin(\theta_A) = v_B \sin(\theta_B)
-\]
-
-\[
-6.45 \sin(\theta_A) = 4.735 \times 0.9613
-\]
-
-\[
-6.45 \sin(\theta_A) = 4.552 \, \text{m/s}
-\]
-
-Solving for \( \sin(\theta_A) \):
-\[
-\sin(\theta_A) = \frac{4.552}{6.45} \Rightarrow 0.7066
-\]
-
-Calculate \( \theta_A \):
-\[
-\theta_A = \arcsin(0.7066) = 44.9^\circ
-\]
-
-Therefore, our predicted value for our large launcher is 44.9 degrees, making \( \theta_A = 44.9^\circ \).
-\vspace{0.5cm} % Adjusts space above the line
-\begin{center}
-    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
-\end{center}
-\vspace{0.5cm} % Adjusts space below the line
-
-\paragraph{\large \textbf{Calculating Collision Time (\( t_c \))}}
-
-Calculate \( \cos(\theta_A) \):
-\[
-\cos(44.9) = \sqrt{1 - \sin^2(44.9)} = \sqrt{1 - (0.7066)^2} = 0.7076
-\]
-
-Calculate \( v_A \cos(\theta_A) \) and \( v_B \cos(\theta_B) \):
-\[
-v_A \cos(\theta_A) = 6.45 \times 0.7076 = 4.563 \, \text{m/s}
-\]
-\[
-v_B \cos(\theta_B) = 4.735 \times 0.2756 = 1.304 \, \text{m/s}
-\]
-
-From here, we use Equation (2) to calculate the time (\( t_c \)):
-\[
-t_c = \frac{D}{v_A \cos(\theta_A) - v_B \cos(\theta_B)}
-\]
-\[
-t_c = \frac{D}{4.563 - 1.304} \Rightarrow \frac{2.0}{3.259} = 0.6136 \, \text{s}
-\]
-
-\vspace{0.5cm} % Adjusts space above the line
-\begin{center}
-    \rule{0.9\textwidth}{0.5pt} % Creates a line with 80% page width and 0.5pt thickness
-\end{center}
-\vspace{0.5cm} % Adjusts space below the line
-
-\paragraph{\large \textbf{Calculate Collision Point}}
-
-\textbf{Horizontal position at \( t_c \)}
-\begin{itemize}
-    \item \textbf{Projectile A:}
-    \[
-    x_A(t_c) = v_A \cos(\theta_A) t_c = 4.563 \times 0.6136 = 2.798 \, \text{m}
-    \]
-    
-    \item \textbf{Projectile B:}
-    \[
-    x_B(t) = D + v_B \cos(\theta_B) t
-    \]
-    \[
-    x_B(t) = 2.0 + 1.304 \times 0.6136 = 2.0 + 0.8 = 2.798 \, \text{m}
-    \]
-\end{itemize}
-
-These calculations show that our horizontal values are equal, which means that our projectile would be at the same position on the x-axis.
-
-\textbf{Vertical position at \( t_c \)}
-\begin{itemize}
-    \item \textbf{Projectile A:}
-    \[
-    y_A(t_c) = v_A \sin(\theta_A) t - \frac{1}{2} g t^2
-    \]
-    \[
-    y_A(t_c) = 4.552 \times 0.6136 - 4.905 \times (0.6136)^2
-    \]
-    \[
-    y_A(t_c) = 2.793 - 1.847 = 0.946 \, \text{m}
-    \]
-
-    \item \textbf{Projectile B:}
-    \[
-    y_B(t_c) = v_B \sin(\theta_B) t - \frac{1}{2} g t^2
-    \]
-    \[
-    y_B(t_c) = 4.552 \times 0.6136 - 4.905 \times (0.6136)^2
-    \]
-    \[
-    y_B(t_c) = 2.793 - 1.847 = 0.946 \, \text{m}
-    \]
-\end{itemize}
-
-Since vertical and horizontal velocities are equal, we can predict that the projectiles would collide at these coordinates, given these values.
-
-\noindent\rule{\textwidth}{0.5pt} % This creates a full-width horizontal line
-
-
 
 \section{Materials and Methods}
 
