@@ -1,12 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.25)  31 OCT 2024 09:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  31 OCT 2024 20:53
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **"c:/Users/Tolly Zhang/OneDrive - School District No. 36 (Surrey)/Fraser Heights Secondary/Grade 11 [2024-2025]/Science Academy/Physics 11/Projectile Motion Lab/Projectile-Motion-Collsion-Lab/Final Latex Build/Final.tex"
 (c:/Users/Tolly Zhang/OneDrive - School District No. 36 (Surrey)/Fraser Heights Secondary/Grade 11 [2024-2025]/Science Academy/Physics 11/Projectile Motion Lab/Projectile-Motion-Collsion-Lab/Final Latex Build/Final.tex
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-09-10>
+L3 programming layer <2024-10-09>
 (C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
 (C:\Users\Tolly Zhang\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
@@ -560,8 +559,8 @@ Package hyperref Info: Link coloring OFF on input line 15.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.112         \item L
-                     ikewise, the combined velocities of both launchers can ... [1]
+l.117     \[
+             [1]
 
 [2]
 
@@ -574,12 +573,12 @@ l.112         \item L
 [6]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 450.
+(caption)                particular \caption on input line 438.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 466.
+(caption)                particular \caption on input line 454.
 See the caption package documentation for explanation.
 
 
@@ -588,28 +587,26 @@ See the caption package documentation for explanation.
 
 [8]
 
-[9]
-
-[10] (Final.aux)
+[9] (Final.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
-L3 programming layer <2024-09-10>
+L3 programming layer <2024-10-09>
  ***********
 Package rerunfilecheck Info: File `Final.out' has not changed.
 (rerunfilecheck)             Checksum: AC072BE56504C0634A54186A4AB7F846;2858.
  ) 
 Here is how much of TeX's memory you used:
- 21662 strings out of 473898
- 410165 string characters out of 5723610
- 784830 words of memory out of 5000000
- 44163 multiletter control sequences out of 15000+600000
+ 21661 strings out of 473896
+ 410158 string characters out of 5723572
+ 785830 words of memory out of 5000000
+ 44165 multiletter control sequences out of 15000+600000
  565305 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,8n,93p,1038b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,8n,93p,1038b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Tolly Zhang\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Tolly Zhang/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Final.pdf (11 pages, 157420 bytes).
+Output written on Final.pdf (10 pages, 155660 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
+ 215 PDF objects out of 1000 (max. 8388607)
+ 50 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

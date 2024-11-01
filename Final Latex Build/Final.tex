@@ -87,57 +87,45 @@ This experiment explored the collision dynamics of two projectiles launched simu
 
 \subsection{Theory}
 
-The setup consisted of two projectile launchers positioned at the same vertical height and angled so their projectile paths would be co-planar. Let them be launchers $A$ and $B$.
-The following variables were defined:
+The setup consisted of two projectile launchers, \(A\) and \(B\), positioned at the same height and angled so that their projectile paths would be co-planar. The following variables are defined:
+
 \begin{itemize}
-    \item Define a coordinate plane that is co-planar to the paths of both projectiles. The unit vectors, $\hat{i}$ and $\hat{j}$, are equal to 1mm, respectively.
-    \item Let $t$ be time, expressed in seconds. In this setup, $t=0$ at the instant both projectiles are launched.
-    \item Let $x^A(t)$, $y^A(t)$, $x^B(t)$, and $y^B(t)$ be the $x$ and $y$ positions for launchers $A$ and $B$, respectively, as a function of $t$.
-    \item Let $\vec{s^A}(t)$ and $\vec{s^B}(t)$ be the displacement vectors for lanchers $A$ and $B$, respectively, as a function  of t, where:
+    \item Coordinate plane: A co-planar reference for both projectile paths, with unit vectors $\hat{i}$ and $\hat{j}$ equal to 1 mm.
+    \item Time \(t\) (in seconds): \(t = 0\) at the moment of launch.
+    \item \(x^A(t)\), \(y^A(t)\), \(x^B(t)\), and \(y^B(t)\): The \(x\)- and \(y\)-positions for projectiles from launchers \(A\) and \(B\), respectively.
+    \item Displacement vectors \(\vec{s^A}(t)\) and \(\vec{s^B}(t)\) as functions of \(t\):
     \[
     \vec{s^A}(t) = \begin{bmatrix} s^A_x(t) \\ s^A_y(t) \end{bmatrix} = \begin{bmatrix} x^A(t) - x^A(0) \\ y^A(t) - y^A(0) \end{bmatrix} 
     \]
     \[
     \vec{s^B}(t) = \begin{bmatrix} s^B_x(t) \\ s^B_y(t) \end{bmatrix} = \begin{bmatrix} x^B(t) - x^B(0) \\ y^B(t) - y^B(0) \end{bmatrix}
     \]
-    \item Let $v_x^A(t)$, $v_y^A(t)$, $v_x^B(t)$, and $v_y^B(t)$ be the horizontal and vertical velocities of launchers $A$ and $B$, respectively, as a function of $t$. 
+    \item Velocities \(v_x^A(t)\), \(v_y^A(t)\), \(v_x^B(t)\), and \(v_y^B(t)\): The horizontal and vertical velocities for each projectile as functions of \(t\).
     
     \begin{itemize}
-        
-        \item Here, the functions are equal to the first-order derivatives of their position counterparts. For example: 
+        \item These velocity functions are the derivatives of their respective positions, e.g., 
         \[
-        v_x^A(t) = \frac{d x^A(t)}{dt}
+        v_x^A(t) = \frac{d x^A(t)}{dt}.
         \]
-        The same applies to the other 3 functions.
-        \item Likewise, the combined velocities of both launchers can be represented using $\vec{v^A}(t)$ and $\vec{v^B}(t)$, where:
+        The combined velocities can be expressed as vectors:
         \[
-        \vec{v^A}(t)= \begin{bmatrix} v_x^A(t) \\ v_y^A(t) \end{bmatrix}
+        \vec{v^A}(t)= \begin{bmatrix} v_x^A(t) \\ v_y^A(t) \end{bmatrix} \quad \text{and} \quad \vec{v^B}(t)= \begin{bmatrix} v_x^B(t) \\ v_y^B(t) \end{bmatrix}
         \]
-        \[
-        \vec{v^B}(t)= \begin{bmatrix} v_x^B(t) \\ v_y^B(t) \end{bmatrix}
-        \]
-        
     \end{itemize}
 
-    \item Let the displacement vector from the position of launcher $A$ to launcher $B$ be denoted as \(\vec{D}\). Assuming the starting position of launcher $A$ is at the origin, the starting positions of both launchers can be written as:
+    \item Displacement vector \(\vec{D} = \begin{bmatrix} D_x \\ D_y \end{bmatrix}\): The vector from launcher \(A\) to launcher \(B\), with initial positions:
     \[
-    \vec{s^A}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+    \vec{s^A}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad \vec{s^B}(0) = \vec{s^A}(0) + \vec{D}
     \]
+    \item \(g = 9.81 \ \text{m/s}^2\): Acceleration due to gravity.
+    \item \(t_c\): Collision time, defined as the smallest \( t_c \geq 0 \) for which:
     \[
-    \vec{s^B}(0) = \vec{s^A}(0) + \vec{D}
+    \vec{s^B}(t_c) = \vec{s^A}(t_c).
     \]
-    \item Let $g$ be the acceleration due to gravity, where \( g = 9.81 \ \text{m/s}^2 \).
-    \item Let $t_c$ be the time of collision such that \( t_c \geq 0 \). For a collision to occur:
-        \[
-            \vec{s^B}(t_c) = \vec{s^A}(t_c)
-        \]
-
 \end{itemize}
 
 \subsection{Initial Speed Measurements}
-To ascertain the initial velocities of the projectiles, the projectile launchers were positioned horizontally on a table and loaded to varying levels. Upon firing the launchers, the speed of the projectiles was recorded using a speed trap in conjunction with an iPad application. The average velocities of the projectiles were subsequently calculated and utilized in further analyses. It is important to note that the measured velocities represent the \textbf{exit velocities} of the projectiles at the moment they left the launchers.
-
-Below are the measured velocities for both launchers:
+To measure initial projectile velocities, launchers were positioned horizontally on a table, loaded to various levels, and fired. Projectile speeds were recorded with a speed trap and an iPad application, and average velocities were used in further calculations. The tables below lists measured exit velocities for both launchers.
 
 \renewcommand{\arraystretch}{1.1 }
 \begin{table}[H]
@@ -169,40 +157,40 @@ Below are the measured velocities for both launchers:
         \hline
         \textbf{High} & 4.69 & 4.73 & 4.75 & \textbf{4.72} \\ 
         \hline
-        
     \end{tabular}
     \caption{Launcher A Exit Speeds by Speed Mode}
     \label{table:ISB}
 \end{table}
 
 \subsection{Calculations}
-Let the launches angles of launchers $A$ and $B$ be denoted as $\theta_A$ and $\theta_B$, respectively, in standard position. The initial velocities of the projectiles can be written as:
+Let the launch angles of launchers \( A \) and \( B \) be denoted as \( \theta_A \) and \( \theta_B \), respectively. The initial velocities of the projectiles can be written as:
 \[
-\vec{v^A}(0) = \begin{bmatrix} |\vec{v^A}(0)| \cdot \cos(\theta_A) \\ |\vec{v^A}(0)| \cdot \sin(\theta_A) \end{bmatrix}
+\vec{v^A}(0) = |\vec{v^A}(0)|\begin{bmatrix} \cos(\theta_A) \\ \sin(\theta_A) \end{bmatrix}, \quad \vec{v^B}(0) = |\vec{v^B}(0)|\begin{bmatrix} \cos(\theta_B) \\ \sin(\theta_B) \end{bmatrix}
 \]
+
+Since \(\vec{v_x}\) is constant, while \(\vec{v_y}\) varies due to gravity, the displacement functions based on initial positions are:
 \[
-\vec{v^B}(0) = \begin{bmatrix} |\vec{v^B}(0)| \cdot \cos(\theta_B) \\ |\vec{v^B}(0)| \cdot \sin(\theta_B) \end{bmatrix}
+\vec{s^A}(t) = \begin{bmatrix} v_x^A(0) \cdot t \\ v_y^A(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}, \quad \vec{s^B}(t) = \begin{bmatrix} D_x + v_x^B(0) \cdot t \\ D_y + v_y^B(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
 \]
-The above corresponds to the following sets of parametric equations:
-\[
-\begin{cases}
-    v_x^A(0) = |\vec{v^A}(0)| \cdot \cos(\theta_A) \\
-    v_y^A(0) = |\vec{v^A}(0)| \cdot \sin(\theta_A)
-\end{cases}
-\]
+
+Setting \(\vec{s^A}(t_c) = \vec{s^B}(t_c)\) for collision at time \(t_c\) leads to:
 \[
 \begin{cases}
-    v_x^B(0) = |\vec{v^B}(0)| \cdot \cos(\theta_B) \\
-    v_y^B(0) = |\vec{v^B}(0)| \cdot \sin(\theta_B)
+    |\vec{v^A}(0)| \cos(\theta_A) \cdot t_c = D_x + |\vec{v^B}(0)| \cos(\theta_B) \cdot t_c \\
+    |\vec{v^A}(0)| \sin(\theta_A) \cdot t_c - \frac{1}{2} g t_c^2 = D_y + |\vec{v^B}(0)| \sin(\theta_B) \cdot t_c - \frac{1}{2} g t_c^2
 \end{cases}
 \]
-As the projectiles travel through the air, \(\vec{v_x}\) remains constant while \(\vec{v_y}\) changes due to the acceleration of gravity. Based on our prior setup where \(\vec{s^A}(0) = \begin{bmatrix} 0 \\ 0 \end{bmatrix}\) and \(\vec{s^B}(0) = \vec{s^A}(0) + \vec{D}\), the displacement functions can be written as:
+Dividing each by \( t_c \) (if \( t_c \neq 0 \)), we derive:
 \[
-\vec{s^A}(t) = \begin{bmatrix} v_x^A(0) \cdot t \\ v_y^A(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
+\vec{v^A}(0) - \vec{v^B}(0) = \frac{\vec{D}}{t_c}
 \]
-\[
-\vec{s^B}(t) = \begin{bmatrix} D_x + v_x^B(0) \cdot t \\ D_y + v_y^B(0) \cdot t - \frac{1}{2} g t^2 \end{bmatrix}
-\]
+
+This equation asserts that for collision, the difference between initial velocities must match the displacement scaled with $t_c$. 
+
+The \textbf{collision point} can be expressed as \(\vec{s^A}(t_c)\) or \(\vec{s^B}(t_c)\)
+
+
+
 
 
 
